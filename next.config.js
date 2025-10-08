@@ -7,11 +7,11 @@ const nextConfig = {
   },
   basePath:
     process.env.NODE_ENV === "production"
-      ? "/studio-ketlyn-carvalho-landing"
+      ? "/studio-ketlyn-carvalho-landin"
       : "",
   assetPrefix:
     process.env.NODE_ENV === "production"
-      ? "/studio-ketlyn-carvalho-landing/"
+      ? "/studio-ketlyn-carvalho-landin/"
       : "",
 };
 
