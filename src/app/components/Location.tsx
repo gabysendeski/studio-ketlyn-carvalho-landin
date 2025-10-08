@@ -56,12 +56,11 @@ const Location = () => {
             </p>
           </div>
 
-          {/* Mapa Integrado com Endereço - MENOR */}
+          {/* Mapa Integrado com Endereço */}
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300">
               
               <div className="relative mb-6">
-                {/* MAPA COM ALTURA REDUZIDA */}
                 <div className="aspect-[16/9] rounded-lg overflow-hidden shadow-lg">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.8!2d-49.1896!3d-25.4284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRua%20Pardal%2C%20242%20-%20Jardim%20Cl%C3%A1udia%2C%20Pinhais%20-%20PR!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr"

@@ -115,7 +115,7 @@ const Courses = () => {
       <div className="container-custom relative z-10">
         <div className="max-w-7xl mx-auto">
           
-          {/* Section Header - AJUSTADO */}
+          {/* Section Header */}
           <div className="text-center mb-12">
             <div className="inline-flex items-center space-x-2 bg-orange-100/60 rounded-full px-5 py-2 mb-5">
               <Crown className="w-4 h-4 text-orange-600" />
@@ -130,7 +130,7 @@ const Courses = () => {
             </p>
           </div>
 
-          {/* Cards Grid - MAIS COMPACTO */}
+          {/* Cards Grid  */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 items-stretch">
             {courses.map((plan, index) => (
               <div 
@@ -146,7 +146,7 @@ const Courses = () => {
                   </div>
                 )}
 
-                {/* Plan Header - COMPACTO */}
+                {/* Plan Header */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-2xl">{plan.icon}</div>
                   <div className="text-right">
@@ -212,7 +212,7 @@ const Courses = () => {
             ))}
           </div>
 
-          {/* Benefits Section - COMPACTA */}
+          {/* Benefits Section*/}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="text-center p-5 bg-white rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-3">

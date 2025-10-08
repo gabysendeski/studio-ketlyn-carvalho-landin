@@ -3,7 +3,6 @@
 import { Check, Sparkles, Calendar, Wallet, Clock, Star, Heart, Crown, TrendingUp, Smile } from 'lucide-react'
 
 const WhyBeautyPass = () => {
-  // Cards introdutórios - informações condensadas
   const introCards = [
     {
       icon: <Sparkles className="w-5 h-5 text-orange-500" />,
@@ -27,7 +26,6 @@ const WhyBeautyPass = () => {
     }
   ]
 
-  // Benefits em cards compactos com ícones
   const benefits = [
     {
       icon: <Wallet className="w-6 h-6 text-orange-500" />,
@@ -74,7 +72,7 @@ const WhyBeautyPass = () => {
       <div className="container-custom relative z-10">
         <div className="max-w-7xl mx-auto">
           
-          {/* Main Header - Beauty Pass Introduction - FONTES AJUSTADAS */}
+          {/* Main Header - Beauty Pass Introduction */}
           <div className="text-center mb-12">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-gray-900 mb-6 leading-tight">
               Beauty Pass – Sua <span className="text-orange-600">Rotina de Beleza</span><br />
@@ -98,7 +96,7 @@ const WhyBeautyPass = () => {
             </div>
           </div>
 
-          {/* Intro Cards - Compact Grid */}
+          {/* Intro Cards  */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16 max-w-4xl mx-auto">
             {introCards.map((card, index) => (
               <div 
@@ -130,7 +128,7 @@ const WhyBeautyPass = () => {
             </p>
           </div>
 
-          {/* Benefits Grid - LADO A LADO */}
+          {/* Benefits Grid  */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {benefits.map((benefit, index) => (
               <div 

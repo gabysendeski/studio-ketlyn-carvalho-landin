@@ -216,7 +216,7 @@ const Footer = () => {
                     </a>
                   </div>
 
-                  {/* CTA SEM BORDA CINZA */}
+                  {/* CTA  */}
                   <div className="bg-orange-50 rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-all duration-300">
                     <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
                       <Heart className="w-5 h-5 text-orange-600" />
@@ -225,7 +225,6 @@ const Footer = () => {
                     <p className="text-gray-600 text-xs mb-3">
                       Conheça nosso Beauty Pass e tenha acesso aos melhores procedimentos
                     </p>
-                    {/* BOTÃO LARANJA ESCURO COM TEXTO BRANCO */}
                     <button 
                       onClick={() => handleLinkClick('#why-beauty-pass')}
                       className="footer-cta-button bg-orange-800 text-white px-4 py-2 rounded-full font-bold text-xs hover:bg-orange-900 transition-all duration-300 transform hover:scale-105 shadow-md"

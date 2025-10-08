@@ -195,10 +195,7 @@ const Procedures = () => {
             </div>
           </div>
 
-          {/* 
-            OPÇÃO 1: Layout 2x2 (RECOMENDADO)
-            Descomente esta seção e comente a Opção 2 para usar o layout 2x2
-          */}
+         
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-5xl mx-auto">
             {filteredProcedures.map((procedure, index) => (
               <div 
@@ -248,56 +245,7 @@ const Procedures = () => {
             ))}
           </div>
 
-          {/* 
-            OPÇÃO 2: Layout 4 lado a lado (ALTERNATIVA)
-            Descomente esta seção e comente a Opção 1 para usar 4 cards lado a lado
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-            {filteredProcedures.map((procedure, index) => (
-              <div 
-                key={procedure.id}
-                className="bg-white p-4 rounded-lg shadow-md border border-gray-100 hover:scale-[1.02] hover:shadow-lg transition-all duration-300 group h-full flex flex-col"
-              >
-                <div className="w-full h-24 bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg mb-3 flex items-center justify-center overflow-hidden">
-                  <div className="text-center">
-                    <div className="text-2xl mb-1">{procedure.icon}</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-sm font-bold text-gray-900 group-hover:text-orange-600 transition-colors leading-tight">
-                    {procedure.title}
-                  </h3>
-                </div>
-                
-                <p className="text-gray-600 mb-3 leading-relaxed text-xs">
-                  {procedure.description}
-                </p>
-
-                <div className="space-y-1 mb-4 flex-grow">
-                  {procedure.features.slice(0, 3).map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-xs text-gray-700">
-                      <CheckCircle className="w-2.5 h-2.5 text-orange-500 mr-1.5 flex-shrink-0" />
-                      <span className="text-xs">{feature}</span>
-                    </div>
-                  ))}
-                  {procedure.features.length > 3 && (
-                    <div className="text-xs text-gray-500 italic">
-                      +{procedure.features.length - 3} benefícios
-                    </div>
-                  )}
-                </div>
-
-                <button 
-                  onClick={scrollToContact}
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-2 px-3 rounded-full font-medium text-xs hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-md"
-                >
-                  AGENDAR
-                </button>
-              </div>
-            ))}
-          </div>
-          */}
+         
         </div>
       </div>
     </section>

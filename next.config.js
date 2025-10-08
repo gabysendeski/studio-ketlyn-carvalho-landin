@@ -1,12 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  trailingSlash: true,
   images: {
-    domains: ['images.unsplash.com'],
-    formats: ['image/webp', 'image/avif'],
+    unoptimized: true,
   },
-  experimental: {
-    optimizeCss: true,
-  },
-}
+  basePath:
+    process.env.NODE_ENV === "production"
+      ? "/studio-ketlyn-carvalho-landing"
+      : "",
+  assetPrefix:
+    process.env.NODE_ENV === "production"
+      ? "/studio-ketlyn-carvalho-landing/"
+      : "",
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -191,7 +191,7 @@ const Hero = () => {
 
                 </div>
 
-                {/* Professional Credentials - ATUALIZADAS */}
+                {/* Professional Credentials  */}
                 <div className="mt-8 text-center">
                   <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-orange-200">
                     <h3 className="font-bold text-gray-900 mb-2">Ketlyn Carvalho</h3>

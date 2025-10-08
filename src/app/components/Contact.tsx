@@ -79,7 +79,7 @@ const Contact = () => {
       <div className="container-custom relative z-10">
         <div className="max-w-7xl mx-auto">
           
-          {/* Section Header - AJUSTADO */}
+          {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-gray-900 mb-6">
               Entre em <span className="text-orange-600">Contato</span>
@@ -92,7 +92,7 @@ const Contact = () => {
 
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
             
-            {/* Formulário - COMPACTO */}
+            {/* Formulário */}
             <div className="xl:col-span-2">
               <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-6">
@@ -191,7 +191,7 @@ const Contact = () => {
                     />
                   </div>
 
-                  {/* Submit Status - COMPACTO */}
+                  {/* Submit Status */}
                   {submitStatus === 'success' && (
                     <div className="bg-green-50 border-2 border-green-200 rounded-lg p-3">
                       <div className="flex items-center">
@@ -237,10 +237,10 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Sidebar - COMPACTA */}
+            {/* Sidebar */}
             <div className="space-y-5">
               
-              {/* Contato Direto - COMPACTO */}
+              {/* Contato Direto */}
               <div className="bg-white p-5 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">
                 <h3 className="text-base font-serif font-bold text-gray-900 mb-4 flex items-center">
                   <Phone className="w-4 h-4 text-orange-500 mr-2" />
@@ -290,7 +290,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Horário de Atendimento - COMPACTO */}
+              {/* Horário de Atendimento*/}
               <div className="p-5 rounded-xl shadow-md bg-gradient-to-br from-orange-500 to-orange-600 text-white">
                 <div className="flex items-center mb-3">
                   <Clock className="w-4 h-4 text-white mr-2" />

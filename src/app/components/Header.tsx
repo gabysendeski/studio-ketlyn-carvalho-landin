@@ -43,7 +43,6 @@ const Header = () => {
           : 'bg-gradient-to-br from-orange-100 via-orange-150 to-orange-200 backdrop-blur-sm'
       }`}
     >
-      {/* CONTAINER MAIS LARGO */}
       <nav className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-4">
         <div className="flex items-center justify-between">
           
@@ -69,7 +68,7 @@ const Header = () => {
               </button>
             ))}
             
-            {/* CTA Button - QUERO MEU BEAUTY PASS - MAIS ESPAÇO */}
+            {/* CTA Button */}
             <button 
               onClick={() => scrollToSection('#contact')}
               className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-3 rounded-full font-bold text-sm tracking-wide hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl whitespace-nowrap"
