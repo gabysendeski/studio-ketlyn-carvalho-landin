@@ -1,26 +1,252 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: #fdfcfb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Classes personalizadas */
+.section-padding {
+  padding: 4rem 1rem;
+}
+
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #d4a574 0%, #c8956d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.beauty-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 165, 116, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(212, 165, 116, 0.1);
+  transition: all 0.3s ease;
+}
+
+.beauty-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(212, 165, 116, 0.15);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(212, 165, 116, 0.2);
+}
+
+/* Cores do tema */
+.bg-primary {
+  background-color: #d4a574;
+}
+
+.text-primary {
+  color: #d4a574;
+}
+
+.border-primary {
+  border-color: #d4a574;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideInLeft {
+  from { 
+    opacity: 0; 
+    transform: translateX(-30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+@keyframes slideInRight {
+  from { 
+    opacity: 0; 
+    transform: translateX(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Background patterns */
+.bg-pattern-dots {
+  background-image: radial-gradient(circle, #d4a574 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.1;
+}
+
+.bg-beauty-gradient {
+  background: linear-gradient(135deg, #fdfcfb 0%, #f7f3f0 50%, #f0ebe6 100%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f3f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4a574;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c8956d;
+}
+
+/* Garantir que elementos importantes sempre apareçam */
+.beauty-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 165, 116, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(212, 165, 116, 0.1);
+  transition: all 0.3s ease;
+  display: block !important; /* Força a exibição */
+  visibility: visible !important; /* Força a visibilidade */
+  opacity: 1 !important; /* Força a opacidade */
+}
+
+/* Garantir que seções de contato sempre apareçam */
+#location .beauty-card,
+#contact .beauty-card {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* Forçar exibição de elementos de contato */
+.contact-info,
+.location-info,
+[class*="contact"],
+[class*="location"] {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Footer Cards - Texto forçado a aparecer */
+.footer-card-button {
+  color: white !important;
+}
+
+.footer-card-title {
+  color: white !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-weight: bold !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.05em !important;
+  line-height: 1.2 !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.footer-card-icon {
+  color: white !important;
+}
+
+.footer-card-svg {
+  color: white !important;
+  fill: white !important;
+}
+
+.footer-cta-button {
+  color: #ea580c !important;
+  background-color: white !important;
+}
+
+.footer-cta-button:hover {
+  background-color: #fed7aa !important;
+}
+
+.footer-card-button * {
+  color: white !important;
+}
+
+.footer-card-button svg {
+  color: white !important;
+  fill: white !important;
 }
