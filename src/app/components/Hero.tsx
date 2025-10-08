@@ -23,10 +23,10 @@ const Hero = () => {
       id="home" 
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-100 via-orange-150 to-orange-200 overflow-hidden pt-20"
     >
-      {/* Background Beauty Elements - Mais visíveis com fundo escuro */}
+      {/* Background Beauty Elements  */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         
-        {/* Elegant Eyelash Pattern - Top */}
+        {/* Elegant Eyelash Pattern */}
         <div className="absolute top-16 left-1/4 opacity-[0.08] rotate-12">
           <svg width="200" height="80" viewBox="0 0 200 80" fill="none">
             <g stroke="#D97706" strokeWidth="2" fill="none">
@@ -44,7 +44,7 @@ const Hero = () => {
           </svg>
         </div>
 
-        {/* Professional Eyebrow Arch - Top Right */}
+        {/* Professional Eyebrow Arch  */}
         <div className="absolute top-20 right-1/4 opacity-[0.1] rotate-[-8deg]">
           <svg width="180" height="60" viewBox="0 0 180 60" fill="none">
             <path d="M20 40 Q 50 15, 90 20 Q 130 18, 160 40" 
@@ -82,7 +82,7 @@ const Hero = () => {
           <Brush className="w-10 h-10 text-orange-500" />
         </div>
 
-        {/* Subtle Geometric Elements - Mais visíveis */}
+        {/* Subtle Geometric Elements  */}
         <div className="absolute top-1/5 right-1/5 w-32 h-32 border border-orange-300/30 rounded-full opacity-[0.08]"></div>
         <div className="absolute bottom-1/4 left-1/5 w-24 h-24 border border-orange-400/25 rounded-full opacity-[0.06]"></div>
         
@@ -101,7 +101,7 @@ const Hero = () => {
           </svg>
         </div>
 
-        {/* Additional Beauty Elements - Mais visíveis */}
+        {/* Additional Beauty Elements */}
         <div className="absolute top-1/2 left-8 opacity-[0.04] rotate-[60deg]">
           <div className="w-32 h-4 bg-gradient-to-r from-transparent via-orange-400/40 to-transparent rounded-full"></div>
         </div>
@@ -164,15 +164,12 @@ const Hero = () => {
                   {/* Decorative Background Circle */}
                   <div className="absolute inset-0 bg-gradient-to-br from-orange-300/40 to-orange-400/30 rounded-full transform rotate-6"></div>
                   
-                  {/* Profile Image Container */}
+                  {/* Profile Image Container*/}
                   <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl">
-                    <Image
-                      src="/images/ketlyn-perfil.jpg" 
+                    <img
+                      src="/studio-ketlyn-carvalho-landin/images/ketlyn-perfil.jpg" 
                       alt="Ketlyn Carvalho - Especialista em Beleza e Estética"
-                      width={400}
-                      height={400}
                       className="w-full h-full object-cover"
-                      priority
                     />
                   </div>
 
