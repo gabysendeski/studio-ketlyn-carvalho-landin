@@ -159,30 +159,31 @@ const Testimonials = () => {
             ))}
           </div>
 
-          {/* Call to Action - LARGURA TOTAL DOS DOIS CARDS */}
+          {/* Call to Action - BOTÕES MENORES */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
             <div className="md:col-span-2">
               <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.02] border border-gray-100 w-full">
                 <div className="text-center">
-                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-5">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-serif font-bold text-gray-900 mb-4 lg:mb-5">
                     Seja nossa próxima cliente satisfeita!
                   </h3>
-                  <p className="text-base md:text-lg text-gray-700 mb-7">
+                  <p className="text-sm md:text-base lg:text-lg text-gray-700 mb-6 lg:mb-7">
                     Junte-se às centenas de mulheres que já transformaram sua autoestima conosco.
                   </p>
+                  {/* BOTÕES MENORES E RESPONSIVOS */}
                   <div className="flex flex-col sm:flex-row gap-3 justify-center">
                     <button 
                       onClick={() => {
                         const element = document.querySelector('#contact')
                         if (element) element.scrollIntoView({ behavior: 'smooth' })
                       }}
-                      className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-3 rounded-full font-bold text-base hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-md"
+                      className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2.5 sm:px-6 sm:py-3 lg:px-8 lg:py-3 rounded-full font-bold text-sm sm:text-base hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-md"
                     >
                       QUERO MEU BEAUTY PASS
                     </button>
                     <button 
                       onClick={() => window.open('https://www.instagram.com/kcbeautyacademy_/', '_blank')}
-                      className="border-2 border-orange-500 text-orange-600 px-8 py-3 rounded-full font-bold text-base hover:bg-orange-50 transition-all duration-300 flex items-center justify-center space-x-2"
+                      className="border-2 border-orange-500 text-orange-600 px-5 py-2.5 sm:px-6 sm:py-3 lg:px-8 lg:py-3 rounded-full font-bold text-sm sm:text-base hover:bg-orange-50 transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       <Instagram className="w-4 h-4" />
                       <span>Ver mais no Instagram</span>

@@ -122,7 +122,6 @@ const Footer = () => {
                       </div>
                       <div>
                         <div className="font-semibold text-gray-900 text-sm">(41) 3669-5677</div>
-                        <div className="text-gray-600 text-xs">WhatsApp - Resposta rápida</div>
                       </div>
                     </div>
 
@@ -132,7 +131,6 @@ const Footer = () => {
                       </div>
                       <div>
                         <div className="font-semibold text-gray-900 text-sm">contato@studioketlyn.com</div>
-                        <div className="text-gray-600 text-xs">Resposta em até 2 horas</div>
                       </div>
                     </div>
                   </div>

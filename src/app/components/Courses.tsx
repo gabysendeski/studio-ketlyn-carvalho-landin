@@ -1,8 +1,12 @@
 'use client'
 
+import { useState } from 'react'
 import { BookOpen, Users, Award, Clock, Star, ArrowRight, Crown, Sparkles, Infinity } from 'lucide-react'
 
 const Courses = () => {
+  // Estado para controlar qual card está selecionado
+  const [selectedCard, setSelectedCard] = useState(1) // Primeiro card selecionado por padrão
+
   const courses = [
     {
       id: 1,
@@ -130,19 +134,30 @@ const Courses = () => {
             </p>
           </div>
 
-          {/* Cards Grid  */}
+          {/* Cards Grid - COM SELEÇÃO */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 items-stretch">
             {courses.map((plan, index) => (
               <div 
                 key={plan.id}
-                className={`relative p-5 bg-white rounded-xl shadow-lg border border-gray-100 
-                  ${plan.popular ? 'border-2 border-orange-500 shadow-orange-200/50' : ''} 
+                onClick={() => setSelectedCard(plan.id)} // Adiciona função de clique
+                className={`relative p-5 bg-white rounded-xl shadow-lg cursor-pointer
+                  ${selectedCard === plan.id 
+                    ? 'border-2 border-orange-500 shadow-orange-200/50 ring-2 ring-orange-200' // Estilo quando selecionado
+                    : 'border border-gray-100 hover:border-orange-200' // Estilo padrão
+                  } 
                   hover:scale-[1.02] transition-all duration-300 group flex flex-col h-full`}
               >
-                {/* Popular Badge */}
-                {plan.popular && (
+                {/* Popular Badge - Apenas visual, não interfere na seleção */}
+                {plan.popular && selectedCard !== plan.id && (
                   <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2.5 py-1 rounded-full text-xs font-bold z-10">
                     POPULAR
+                  </div>
+                )}
+
+                {/* Selected Badge - Aparece quando selecionado */}
+                {selectedCard === plan.id && (
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2.5 py-1 rounded-full text-xs font-bold z-10">
+                    SELECIONADO
                   </div>
                 )}
 
@@ -173,7 +188,7 @@ const Courses = () => {
                     {plan.description}
                   </p>
 
-                  {/* Features  */}
+                  {/* Features */}
                   <div className="space-y-1.5 mb-4 flex-grow">
                     {plan.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-start text-xs text-gray-700">
@@ -191,18 +206,28 @@ const Courses = () => {
                   </p>
                 </div>
 
-                {/* CTA Buttons  */}
+                {/* CTA Buttons */}
                 <div className="space-y-2">
                   <button 
-                    onClick={scrollToContact}
-                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-2.5 px-4 rounded-full font-semibold text-sm hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-[1.02] shadow-md flex items-center justify-center space-x-2"
+                    onClick={(e) => {
+                      e.stopPropagation() // Evita que o clique no botão selecione o card
+                      scrollToContact()
+                    }}
+                    className={`w-full py-2.5 px-4 rounded-full font-semibold text-sm transition-all duration-300 transform hover:scale-[1.02] shadow-md flex items-center justify-center space-x-2 ${
+                      selectedCard === plan.id
+                        ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700'
+                        : 'bg-gray-100 text-gray-700 hover:bg-orange-50 hover:text-orange-600'
+                    }`}
                   >
                     <span>{plan.isCustom ? 'SOLICITAR ORÇAMENTO' : 'QUERO ASSINAR'}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                   
                   <button 
-                    onClick={scrollToContact}
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      scrollToContact()
+                    }}
                     className="w-full border-2 border-orange-200 text-orange-700 py-2.5 px-4 rounded-full font-semibold text-sm hover:border-orange-300 hover:bg-orange-50 transition-all duration-300"
                   >
                     Mais informações
@@ -212,7 +237,7 @@ const Courses = () => {
             ))}
           </div>
 
-          {/* Benefits Section*/}
+          {/* Benefits Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="text-center p-5 bg-white rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -239,7 +264,6 @@ const Courses = () => {
             </div>
           </div>
 
-          
         </div>
       </div>
     </section>

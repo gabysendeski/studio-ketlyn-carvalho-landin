@@ -96,7 +96,7 @@ const WhyBeautyPass = () => {
             </div>
           </div>
 
-          {/* Intro Cards  */}
+          {/* Intro Cards */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16 max-w-4xl mx-auto">
             {introCards.map((card, index) => (
               <div 
@@ -128,7 +128,7 @@ const WhyBeautyPass = () => {
             </p>
           </div>
 
-          {/* Benefits Grid  */}
+          {/* Benefits Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {benefits.map((benefit, index) => (
               <div 
@@ -155,21 +155,22 @@ const WhyBeautyPass = () => {
             ))}
           </div>
 
-          {/* Bottom CTA */}
+          {/* Bottom CTA - BOTÃO MENOR */}
           <div className="text-center">
-            <div className="beauty-card bg-white p-10 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-gray-200">
+            <div className="beauty-card bg-white p-8 lg:p-10 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] border border-gray-200">
               <div className="max-w-3xl mx-auto">
-                <h3 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-gray-900">
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-serif font-bold mb-4 lg:mb-6 text-gray-900">
                   Pronta para transformar sua rotina de beleza?
                 </h3>
-                <p className="text-lg text-gray-700 mb-8">
+                <p className="text-base lg:text-lg text-gray-700 mb-6 lg:mb-8">
                   Comece hoje mesmo e veja a diferença que o Beauty Pass pode fazer na sua vida.
                 </p>
+                {/* BOTÃO MENOR E RESPONSIVO */}
                 <button 
                   onClick={scrollToContact}
-                  className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-12 py-4 rounded-full font-bold text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 sm:px-8 sm:py-3 lg:px-10 lg:py-4 rounded-full font-bold text-sm sm:text-base lg:text-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
-                  QUERO MEU BEAUTY PASS AGORA
+                  QUERO MEU BEAUTY PASS
                 </button>
               </div>
             </div>
